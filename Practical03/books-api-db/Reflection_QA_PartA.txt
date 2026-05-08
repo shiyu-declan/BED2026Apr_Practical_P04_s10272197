@@ -1,0 +1,2 @@
+Code is hella messy
+use try except to catch errors or code will explode
