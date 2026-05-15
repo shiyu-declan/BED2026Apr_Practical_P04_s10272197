@@ -1,0 +1,11 @@
+# Task 1
+1. I separated the code into different folders based on their roles.
+2. One challenge was making sure all files were connected correctly using require() and module.exports.
+3. MVC makes it easier to know where to add or edit code.
+4. The code is cleaner because everything is separated into smaller files.
+5. Separating concerns improves readability.
+
+# Task 2
+1. Validation prevents invalid data from entering the database potentially causing a crash or worse.
+2. Parameterized queries separate user input from the SQL command, which treats the input as data only, not as executable SQL code.
+3. Robust error handling prevents sensitive system information from being shown to users.
