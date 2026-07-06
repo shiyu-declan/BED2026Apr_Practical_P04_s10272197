@@ -31,11 +31,8 @@ app.use(express.static(path.join(__dirname, "public")));
 // Routes for books
 // Apply middleware *before* the controller function for routes that need it
 app.get("/books", bookController.getAllBooks);
-app.get("/books/:id", validateBookId, bookController.getBookById); // Use validateBookId middleware
-app.post("/books", validateBook, bookController.createBook); // Use validateBook middleware
-app.put("/books/:id", validateBookId, validateBook, bookController.updateBook); // Use both middlewares for PUT
-app.delete("/books/:id", validateBookId, bookController.deleteBook); // Use validateBookId middleware for DELETE
-// Add routes for PUT/DELETE if implemented, applying appropriate middleware
+app.put("/books/:id", validateBookId, validateBook, bookController.updateBookAvailability); // Use both middlewares for PUT
+
 
 // Start server
 app.listen(port, () => {
